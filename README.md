@@ -72,6 +72,8 @@ analytics, no external servers, no account. `storage` is used only to remember
 your draft for the current Chrome session; `scripting` is used only to inject
 the Gmail insertion script on demand.
 
+See [PRIVACY.md](PRIVACY.md) for the full privacy policy.
+
 ## Project layout
 
 | Path | Role |
