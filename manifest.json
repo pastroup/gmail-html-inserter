@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Insert HTML into Gmail",
+  "description": "Compose HTML with a live preview and insert it into a Gmail message at the cursor. Local-only, no accounts.",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Insert HTML into Gmail",
+    "default_icon": {
+      "16": "icons/quill-16.png",
+      "32": "icons/quill-32.png"
+    }
+  },
+  "icons": {
+    "16": "icons/quill-16.png",
+    "32": "icons/quill-32.png",
+    "48": "icons/quill-48.png",
+    "128": "icons/quill-128.png"
+  },
+  "permissions": ["storage", "tabs", "scripting"],
+  "host_permissions": ["https://mail.google.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

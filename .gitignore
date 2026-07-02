@@ -1,0 +1,12 @@
+# Dependencies & build output
+node_modules/
+vendor/editor.bundle.js
+dist/
+gmail-html-inserter.zip
+
+# Claude Design handoff artifacts (not part of the extension)
+icon/
+HTML to Gmail converter-handoff.zip
+
+# OS junk
+.DS_Store

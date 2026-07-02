@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <span class="title">Insert HTML into Gmail</span>
+        <a href="#" id="load-example" class="link">Load example newsletter</a>
+      </div>
+      <span id="status" class="status"></span>
+    </header>
+
+    <main>
+      <section class="pane">
+        <div class="pane-label">HTML</div>
+        <div id="editor"></div>
+      </section>
+      <section class="pane">
+        <div class="pane-label">Preview</div>
+        <iframe
+          id="preview"
+          sandbox=""
+          referrerpolicy="no-referrer"
+          title="HTML preview"
+        ></iframe>
+      </section>
+    </main>
+
+    <footer>
+      <input
+        id="file"
+        type="file"
+        accept=".html,.htm,text/html"
+        hidden
+      />
+      <button id="load" class="btn btn-secondary footer-left">
+        Upload HTML file
+      </button>
+      <button id="reset" class="btn btn-secondary">Reset to default</button>
+      <button id="clear" class="btn btn-secondary">Clear</button>
+      <button id="insert" class="btn btn-primary">Insert into Gmail</button>
+    </footer>
+
+    <!-- In-popup confirmation dialog (native confirm() is unreliable in
+         extension popups — it can steal focus and close the popup). -->
+    <div id="confirm" class="modal" hidden>
+      <div class="modal-box" role="dialog" aria-modal="true">
+        <p id="confirm-msg" class="modal-msg"></p>
+        <div id="confirm-actions" class="modal-actions"></div>
+      </div>
+    </div>
+
+    <!-- CodeMirror bundle (built by esbuild) exposes window.GmailHtmlEditor -->
+    <script src="vendor/editor.bundle.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
