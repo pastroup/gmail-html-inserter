@@ -10,3 +10,6 @@ HTML to Gmail converter-handoff.zip
 
 # OS junk
 .DS_Store
+
+# Private local notes (Paul + Claude memory; never publish)
+CLAUDE.md

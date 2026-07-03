@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 440px; height: 280px; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: radial-gradient(520px 360px at 78% 12%, #fbf7ec 0%, #f1efe9 45%, #e7ecf0 100%);
+    color: #2E2E31; overflow: hidden;
+  }
+  .tile { width: 440px; height: 280px; position: relative; padding: 34px 36px; display: flex; flex-direction: column; justify-content: center; }
+  .accent { position: absolute; left: 0; top: 0; bottom: 0; width: 8px; background: #8F7328; }
+  .icon { width: 64px; height: 64px; margin-bottom: 20px; filter: drop-shadow(0 5px 12px rgba(0,0,0,0.15)); }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size: 30px; line-height: 35px; font-weight: 700; letter-spacing: -0.4px; }
+  h1 .g { color: #8F7328; }
+  p { margin-top: 12px; font-size: 14px; line-height: 20px; color: #5f5b53; max-width: 330px; }
+</style>
+</head>
+<body>
+  <div class="tile">
+    <div class="accent"></div>
+    <svg class="icon" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+      <defs><clipPath id="r"><rect width="128" height="128" rx="23.04"/></clipPath></defs>
+      <g clip-path="url(#r)">
+        <rect width="128" height="128" fill="#EDEDEB"/>
+        <g transform="translate(6.4 6.4) scale(1.28 1.2522) translate(-34 -12)">
+          <path d="M100 20 C118 46 98 76 56 82 C80 60 86 40 100 20 Z" fill="#8F7328"/>
+          <path d="M86 34 l11 -3 M78 46 l12 -2 M70 58 l11 -1" fill="none" stroke="#EDEDEB" stroke-width="1.6" stroke-linecap="round" opacity="0.5"/>
+          <path d="M96 26 C80 48 66 66 54 80" fill="none" stroke="#EDEDEB" stroke-width="2.4" stroke-linecap="round" opacity="0.7"/>
+          <path d="M56 80 L42 94" fill="none" stroke="#8F7328" stroke-width="4" stroke-linecap="round"/>
+          <path d="M42 94 l-3.5 6 7.5 -2 Z" fill="#8F7328"/>
+        </g>
+      </g>
+    </svg>
+    <h1>Compose HTML.<br>Insert into <span class="g">Gmail</span>.</h1>
+    <p>Write, preview, and insert HTML into your email &mdash; 100% local.</p>
+  </div>
+</body>
+</html>
